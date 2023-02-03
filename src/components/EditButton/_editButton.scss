@@ -1,0 +1,10 @@
+.edit--btn {
+  width: fit-content;
+  padding: .5rem;
+  background-color: violet;
+  border: 1px solid black;
+
+  &:hover {
+    background-color: blue;
+  }
+}

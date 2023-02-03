@@ -1,11 +1,16 @@
-import Form from '../../components/Form/Form'
+// Import components
+import BoomarkList from '../../components/BookmarkList/BookmarkList';
+import DeleteAllButton from '../../components/DeleteAllButton/DeleteAllButton';
+import Form from '../../components/Form/Form';
 
 function Home() {
   return (
     <div>
-     <Form />
+      <Form />
+      <BoomarkList/>
+      <DeleteAllButton />
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;
