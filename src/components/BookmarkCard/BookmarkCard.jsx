@@ -1,8 +1,10 @@
 import { useState } from 'react';
-import CancelButton from '../CancelButton/CancelButton';
-import DeleteOneButton from '../DeleteOneButton/DeleteOneButton';
-import EditButton from '../EditButton/EditButton';
-import UpdateButton from '../UpdateButton/UpdateButton';
+
+// Import components
+import CancelButton from '../Buttons/CancelButton/CancelButton';
+import DeleteOneButton from '../Buttons/DeleteOneButton/DeleteOneButton';
+import EditButton from '../Buttons/EditButton/EditButton';
+import UpdateButton from '../Buttons/UpdateButton/UpdateButton';
 
 function BookmarkCard({ eachLink, eachBoomarkID, submitUpdate }) {
   const [isEditing, setIsEditing] = useState(false);
@@ -32,16 +34,22 @@ function BookmarkCard({ eachLink, eachBoomarkID, submitUpdate }) {
   return (
     <div className='bookmark--card'>
       {isEditing ? (
-        <>
+        <div className='bookmark--card__update'>
           <input type='text' value={newLink} onChange={LinkValueChange} />
-          <UpdateButton handleUpdateBtn={UpdateClick} />
-          <CancelButton handleCancelBtn={CancelClick} />
-        </>
+          <div className="bookmark--card__update--buttons">
+            <UpdateButton handleUpdateBtn={UpdateClick} />
+            <CancelButton handleCancelBtn={CancelClick} />
+          </div>
+        </div>
       ) : (
         <>
-          <a href={eachLink}>Link:{eachLink}</a>
-          <DeleteOneButton />
-          <EditButton handleEditBtn={EditClick} />
+          <a href={eachLink}>{eachLink}</a>
+          <div className="bookmark--card__edit">
+            <div className="bookmark--card__edit--buttons">
+              <EditButton handleEditBtn={EditClick} />
+              <DeleteOneButton />
+            </div>
+          </div>
         </>
       )}
     </div>

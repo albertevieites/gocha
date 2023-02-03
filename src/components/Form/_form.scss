@@ -1,24 +1,55 @@
+@use '../../styles/abstracts/colors' as *;
+@use '../../styles/abstracts/fonts' as *;
+@use '../../styles/abstracts/variables' as *;
+
 .form {
-  width: 100%;
-  padding: 3rem;
-  background-color: aqua;
-  border: 2px solid black;
+  width: fit-content;
+  padding: $two-rem;
+  background-color: $clr-bg-form;
+  border-top: $one-px--size solid $clr-light-white;
+  border-left: $one-px--size solid $clr-light-white;
+  border-radius: $one-rem;
+  box-shadow: 0 $quarter-rem $shadow-rem $clr-box-shadow;
+  backdrop-filter: blur($blur-rem);
+
+  color: $clr-white;
 
   h1 {
-    text-align: center;
+    margin-bottom: $two-rem;
+    font-weight: $f-w-700;
   }
 
   &__container {
-    width: 20rem;
-    margin: 1em auto;
-    border: 2px solid darkmagenta;
+    display: flex;
+
+    &--link {
+      margin-right: $one-rem;
+    }
   }
+
   input {
-    margin-bottom: 2rem;
-    border: 2px solid blue;
+    height: 100%;
+    margin-right: $one-rem;
+    padding-left: $one-rem;
+    border: $one-px--size solid $clr-light-white;
+    border-radius: $one-rem;
   }
+
   button {
-    padding: 0.7em;
-    border: 2px solid green;
+    padding: $half-rem $one-rem;
+    background-color: $clr-white;
+    border-radius: $blur-rem;
+
+    font-size: $f-s-500;
+    font-weight: $f-w-700;
+    color: $clr-terciary;
+
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: $clr-green;
+
+      color: $clr-white;
+    }
   }
 }

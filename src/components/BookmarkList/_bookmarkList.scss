@@ -1,7 +1,12 @@
+@use '../../styles/abstracts/colors' as *;
+@use '../../styles/abstracts/variables' as *;
+
 .bookmark--list {
-  width: 20rem;
+  display: grid;
+  gap: $one-rem;
+  grid-template-columns: repeat(5, 1fr);
+
+  width: 80%;
+  max-width: 1200px;
   margin: 1rem auto;
-  padding: 2rem;
-  background-color: lightcoral;
-  border: 2px solid black;
 }

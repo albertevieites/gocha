@@ -1,8 +1,14 @@
 @forward '../../components/BookmarkCard/boomarkCard';
 @forward '../../components/BookmarkList/bookmarkList';
-@forward '../../components/CancelButton/cancelButton';
-@forward '../../components/DeleteAllButton/deleteAllButton';
-@forward '../../components/DeleteOneButton/deleteOneButton';
-@forward '../../components/EditButton/editButton';
+
+// Buttons
+@forward '../../components/Buttons/CancelButton/cancelButton';
+@forward '../../components/Buttons/DeleteAllButton/deleteAllButton';
+@forward '../../components/Buttons/DeleteOneButton/deleteOneButton';
+@forward '../../components/Buttons/EditButton/editButton';
+@forward '../../components/Buttons/UpdateButton/updateButton';
+
+@forward '../../components/Layout/layout';
 @forward '../../components/Form/form';
-@forward '../../components/UpdateButton/updateButton';
+@forward '../../components/Pagination/pagination';
+@forward '../../components/Title/title';

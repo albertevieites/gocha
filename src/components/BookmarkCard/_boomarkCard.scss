@@ -1,5 +1,50 @@
+@use '../../styles/abstracts/colors' as *;
+@use '../../styles/abstracts/fonts' as *;
+@use '../../styles/abstracts/variables' as *;
+
 .bookmark--card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   margin-bottom: 1rem;
-  background-color: deepskyblue;
-  border: 2px solid black;
+  padding: $padding--size;
+
+  background: $clr-bg-card;
+  border-top: $one-px--size solid $clr-light-white;
+  border-left: $one-px--size solid $clr-light-white;
+  border-radius: $one-rem;
+  box-shadow: 0 $quarter-rem $shadow-rem $clr-box-shadow;
+  backdrop-filter: blur($blur-rem);
+
+  a {
+    margin-bottom: $two-rem;
+
+    font-size: $f-s-500;
+    font-weight: $f-w-300;
+    color: $clr-white;
+  }
+}
+
+.bookmark--card__update {
+  input {
+    margin-bottom: $two-rem;
+
+    font-size: $f-s-500;
+    font-weight: $f-w-300;
+    color: $clr-white;
+  }
+  &--buttons {
+    display: flex;
+    gap: $one-rem;
+    flex-direction: column;
+  }
+}
+
+.bookmark--card__edit {
+  &--buttons {
+    display: flex;
+    gap: $one-rem;
+    flex-direction: column;
+  }
 }

@@ -1,4 +1,4 @@
-import { useBookmark } from '../../contexts/BookmarkContext';
+import { useBookmark } from '../../../contexts/BookmarkContext';
 
 function DeleteOneButton() {
   const { bookmarks, DeleteBookmark } = useBookmark();

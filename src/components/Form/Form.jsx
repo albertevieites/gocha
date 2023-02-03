@@ -37,7 +37,7 @@ const Form = () => {
       {/* Form */}
       <div className="form__container">
         <div className="form__container--link">
-          <label htmlFor="bookmark">Boomark</label>
+          <label htmlFor="bookmark"></label>
           <input
             type="text"
             name='url'
@@ -46,7 +46,7 @@ const Form = () => {
           />
         </div>
 
-        <button onClick={handleSubmit}>Send it!</button>
+        <button onClick={handleSubmit}>Save it!</button>
       </div>
     </div>
   );

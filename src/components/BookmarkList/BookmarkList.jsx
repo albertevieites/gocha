@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { useBookmark } from '../../contexts/BookmarkContext';
 import BookmarkCard from '../BookmarkCard/BookmarkCard';
 
-const BoomarkList = () => {
+const BoomarkList = ({ currentPage, itemsPerPage }) => {
   const { bookmarks, setBookmarks } = useBookmark();
 
   useEffect(() => {
@@ -26,9 +26,17 @@ const BoomarkList = () => {
     updateBookmark(id, newValue);
   };
 
+  // Get current bookmarks
+  const LastBookmarkIndex = currentPage * itemsPerPage;
+  const FirstBookmarkIndex = LastBookmarkIndex - itemsPerPage;
+  const currentBookmarks = bookmarks.slice(
+    FirstBookmarkIndex,
+    LastBookmarkIndex
+  );
+
   return (
     <div className='bookmark--list'>
-      {bookmarks.map(bookmark => {
+      {currentBookmarks.map(bookmark => {
         return (
           <BookmarkCard
             key={bookmark.id}

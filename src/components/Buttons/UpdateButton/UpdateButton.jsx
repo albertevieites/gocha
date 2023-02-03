@@ -1,6 +1,6 @@
 function UpdateButton({ handleUpdateBtn }) {
   return (
-    <div>
+    <div className="update--btn">
       <button onClick={handleUpdateBtn}>Update</button>
     </div>
   );
