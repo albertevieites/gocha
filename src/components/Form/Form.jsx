@@ -1,45 +1,47 @@
-// Import dependencies
+// Import from modules
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useBookmark } from '../../contexts/BookmarkContext';
 
 const Form = () => {
-  // Hook to redirect to error page
-  const navigate = useNavigate();
+  const { AddBookmark } = useBookmark();
 
-  // Boomark data state
-  const [bookmark, setBookmark] = useState(
-    JSON.parse(localStorage.getItem('bookmark')) || [
-      { id: 1, title: "Phantom", url: "https://phantom.land"},
-      { id: 2, title: "Google", url: "https://www.google.com"},
-      { id: 3, title: "Facebook", url: "https://www.facebook.com"},
-      { id: 4, title: "Google", url: "https://www.twitter.com"},
-    ]
-  );
+  // Handle redirection to error page
+  const navigate = useNavigate();
+  // URL data state
+  const [url, setUrl] = useState("");
 
   // Function to handle events
-  const handleBookmarkChange= (event) => { setBookmark(event.target.value) }
-
-  // [(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)
+  const handleBookmarkChange = (event) => { setUrl(event.target.value) }
 
   // Function to handle submit events
-  const handleSubmit = event => {
-    console.log(event)
-    event.preventDefault();
-  }
+  const handleSubmit = async () => {
+    const newBookmark = {
+      id: Date.now(),
+      url,
+    };
+    try {
+      await AddBookmark(newBookmark);
+      setUrl("");
+    } catch (error) {
+      navigate("/error")
+    }
+  };
+
+  // [(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)
 
 
   return (
     <div className="form">
       <h1>Drop a link</h1>
-
       {/* Form */}
       <div className="form__container">
         <div className="form__container--link">
-          <label htmlFor="link">Link</label>
+          <label htmlFor="bookmark">Boomark</label>
           <input
             type="text"
-            name='bookmark'
-            value={bookmark}
+            name='url'
+            value={url}
             onChange={handleBookmarkChange}
           />
         </div>

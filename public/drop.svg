@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 313.82 436.19">
+  <path d="M313.82,279.28c0,86.66-70.25,156.91-156.91,156.91S0,365.94,0,279.28,91.97,96.81,156.91,0c64.94,96.81,156.91,192.62,156.91,279.28Z" style="fill: #6ba6ce;"/>
+  <g style="opacity: .75;">
+    <path d="M156.91,0c-90.6,229.49-96.46,372.66,0,436.19C70.25,436.19,0,365.94,0,279.28S91.97,96.81,156.91,0Z" style="fill: #235887;"/>
+  </g>
+  <path d="M219.29,378.89c56.39-33.86,55.7-82.61,55.7-82.61" style="fill: none; stroke: #fff; stroke-linecap: round; stroke-miterlimit: 10; stroke-width: 16px;"/>
+</svg>
