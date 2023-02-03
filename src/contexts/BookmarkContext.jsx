@@ -16,6 +16,10 @@ function BookmarkWrapper({ children }) {
     savedBookmarks ? JSON.parse(savedBookmarks) : []
     );
 
+  // Pagination
+  const [currentPage, setCurrentPage] = useState(1);
+  const [bookmarksPerPage] = useState(4);
+
   // Store bookmarks in the local storage
   useEffect(() => {
     localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
@@ -39,6 +43,14 @@ function BookmarkWrapper({ children }) {
     setBookmarks([]);
   };
 
+  // Get current bookmarks
+  const LastBookmarkIndex = currentPage * bookmarksPerPage;
+  const FirstBookmarkIndex = LastBookmarkIndex - bookmarksPerPage;
+  const currentBookmarks = bookmarks.slice(
+    FirstBookmarkIndex,
+    LastBookmarkIndex
+  );
+
   return (
     <BookmarkContext.Provider
       value={{
@@ -46,7 +58,10 @@ function BookmarkWrapper({ children }) {
         setBookmarks,
         AddBookmark,
         DeleteBookmark,
-        DeleteAllBookmarks
+        DeleteAllBookmarks,
+        setCurrentPage,
+        LastBookmarkIndex,
+        currentBookmarks
       }}
     >
       {children}

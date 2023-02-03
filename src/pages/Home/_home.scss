@@ -1,0 +1,16 @@
+@use '../../styles/abstracts/colors' as *;
+@use '../../styles/abstracts/fonts' as *;
+@use '../../styles/abstracts/variables' as *;
+
+.home {
+  &__header {
+    display: flex;
+    gap: $three-rem;
+    justify-content: space-evenly;
+
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: $three-rem 0;
+  }
+}

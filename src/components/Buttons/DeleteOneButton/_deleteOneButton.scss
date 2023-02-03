@@ -1,0 +1,30 @@
+@use '../../../styles/abstracts/colors' as *;
+@use '../../../styles/abstracts/fonts' as *;
+@use '../../../styles/abstracts/variables' as *;
+
+.one--btn {
+  padding: 0.5rem;
+  background-color: $clr-bg-card-light;
+  border-radius: $blur-rem;
+  border: $one-px--size solid $clr-light-black;
+  box-shadow: 0 $quarter-rem $shadow-rem $clr-box-shadow;
+
+  color: $clr-light-black;
+
+  transition: 0.3s;
+
+  button {
+    width: 100%;
+
+    font-size: $f-s-400;
+    font-weight: $f-w-700;
+    text-align: center;
+  }
+
+  &:hover {
+    background-color: $clr-red;
+    border: $one-px--size solid transparent;
+
+    color: $clr-white;
+  }
+}

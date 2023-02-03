@@ -1,0 +1,19 @@
+// Colour variables
+$clr-primary: hsl(212, 43%, 66%);
+$clr-secondary: hsl(216, 33%, 45%);
+$clr-terciary: hsl(216, 33%, 25%);
+
+$clr-white: hsl(240, 100%, 99%);
+$clr-light-white: hsla(240, 100%, 99%, .3);
+$clr-black: hsl(0, 100%, 4%);
+$clr-light-black: hsla(0, 100%, 4%, .7);
+$clr-green: hsla(158, 37%, 62%, .5);
+$clr-red: hsl(356, 37%, 62%);
+$clr-vivid-red: hsl(360, 71%, 62%);
+$clr--orange: hsl(36, 71%, 62%);
+
+$clr-bg-card: hsla(0, 0%, 100%, .2);
+$clr-bg-card-light: hsla(0, 0%, 100%, .1);
+$clr-bg-form: hsla(0, 0%, 0%, .2);
+$clr-bg-btn: hsla(0, 0%, 100%, .4);
+$clr-box-shadow: hsla(0, 0%, 0%, .1);

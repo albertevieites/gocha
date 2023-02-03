@@ -1,6 +1,6 @@
 function CancelButton({handleCancelBtn}) {
   return (
-    <div>
+    <div className="cancel--btn">
       <button onClick={handleCancelBtn}>Cancel</button>
     </div>
   );
