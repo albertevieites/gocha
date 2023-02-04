@@ -2,29 +2,22 @@
 @use '../../../styles/abstracts/fonts' as *;
 @use '../../../styles/abstracts/variables' as *;
 
+
 .cancel--btn {
-  padding: .5rem;
-  background-color: $clr-bg-card-light;
+  width: fit-content;
+  padding: $half-rem;
+  background-color: $clr-red;
   border-radius: $blur-rem;
-  border: $one-px--size solid $clr-light-black;
+  border-top: $one-px--size solid $clr-light-white;
+  border-left: $one-px--size solid $clr-light-white;
   box-shadow: 0 $quarter-rem $shadow-rem $clr-box-shadow;
+  backdrop-filter: blur($blur-rem);
 
   color: $clr-light-black;
 
-  transition: 0.3s;
-
-  button {
-    width: 100%;
-
-    font-size: $f-s-400;
-    font-weight: $f-w-700;
-    text-align: center;
-  }
+  transition: all 0.3s ease-in-out;
 
   &:hover {
-    background-color: $clr--orange;
-    border: $one-px--size solid transparent;
-
-    color: $clr-white;
+    background-color: $clr-terciary;
   }
 }

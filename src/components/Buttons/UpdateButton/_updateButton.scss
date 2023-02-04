@@ -3,8 +3,9 @@
 @use '../../../styles/abstracts/variables' as *;
 
 .update--btn {
-   padding: .5rem;
-  background-color: $clr-bg-btn;
+  width: fit-content;
+  padding: $half-rem;
+  background-color: $clr-green;
   border-radius: $blur-rem;
   border-top: $one-px--size solid $clr-light-white;
   border-left: $one-px--size solid $clr-light-white;
@@ -15,18 +16,7 @@
 
   transition: all 0.3s ease-in-out;
 
-  button {
-    width: 100%;
-
-    font-size: $f-s-400;
-    font-weight: $f-w-700;
-    text-align: center;
-  }
-
   &:hover {
-    background-color: $clr-secondary;
-
-    color: $clr-white;
+    background-color: $clr-terciary;
   }
 }
-

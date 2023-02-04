@@ -8,7 +8,7 @@ import BoomarkList from '../../components/BookmarkList/BookmarkList';
 import DeleteAllButton from '../../components/Buttons/DeleteAllButton/DeleteAllButton';
 import Form from '../../components/Form/Form';
 import Pagination from '../../components/Pagination/Pagination';
-import Title from '../../components/Title/Title';
+import Title from '../../components/Header/Header';
 
 function Home() {
   const { bookmarks } = useBookmark();
@@ -22,12 +22,19 @@ function Home() {
 
   return (
     <div className='home'>
-      <div className="home__header">
+      <header>
         <Title />
         <Form />
-      </div>
-      <BoomarkList currentPage={currentPage} itemsPerPage={bookmarksPerPage} />
-      <DeleteAllButton />
+      </header>
+
+      <div className='separator'></div>
+
+      <main>
+        <BoomarkList currentPage={currentPage} itemsPerPage={bookmarksPerPage} />
+        <DeleteAllButton />
+      </main>
+
+      <footer>
       <Pagination
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
@@ -35,6 +42,7 @@ function Home() {
         bookmarksPerPage={bookmarksPerPage}
         paginate={paginate}
       />
+      </footer>
     </div>
   );
 }

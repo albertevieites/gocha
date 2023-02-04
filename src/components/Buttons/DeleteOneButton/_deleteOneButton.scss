@@ -3,10 +3,12 @@
 @use '../../../styles/abstracts/variables' as *;
 
 .one--btn {
-  padding: 0.5rem;
-  background-color: $clr-bg-card-light;
+  width: fit-content;
+  padding: $half-rem;
+  background-color: $clr-red;
   border-radius: $blur-rem;
-  border: $one-px--size solid $clr-light-black;
+  border-top: $one-px--size solid $clr-light-white;
+  border-left: $one-px--size solid $clr-light-white;
   box-shadow: 0 $quarter-rem $shadow-rem $clr-box-shadow;
 
   color: $clr-light-black;
@@ -22,9 +24,6 @@
   }
 
   &:hover {
-    background-color: $clr-red;
-    border: $one-px--size solid transparent;
-
-    color: $clr-white;
+    background-color: $clr-terciary;
   }
 }

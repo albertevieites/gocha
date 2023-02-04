@@ -4,11 +4,10 @@
 
 .bookmark--card {
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
 
-  margin-bottom: 1rem;
-  padding: $padding--size;
+  padding: $one-rem;
 
   background: $clr-bg-card;
   border-top: $one-px--size solid $clr-light-white;
@@ -18,26 +17,9 @@
   backdrop-filter: blur($blur-rem);
 
   a {
-    margin-bottom: $two-rem;
-
     font-size: $f-s-500;
     font-weight: $f-w-300;
     color: $clr-white;
-  }
-}
-
-.bookmark--card__update {
-  input {
-    margin-bottom: $two-rem;
-
-    font-size: $f-s-500;
-    font-weight: $f-w-300;
-    color: $clr-white;
-  }
-  &--buttons {
-    display: flex;
-    gap: $one-rem;
-    flex-direction: column;
   }
 }
 
@@ -46,5 +28,35 @@
     display: flex;
     gap: $one-rem;
     flex-direction: column;
+  }
+}
+
+.bookmark--card__update {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+
+  input {
+    height: fit-content;
+    padding-bottom: $half-rem;
+    padding-top: $half-rem;
+    padding-left: $one-rem;
+
+    border: $one-px--size solid $clr-white;
+    border-radius: $one-rem;
+
+    font-size: $f-s-500;
+    font-weight: $f-w-300;
+    color: $clr-white;
+  }
+
+  &--buttons {
+    display: flex;
+    gap: $one-rem;
+    flex-direction: column;
+
+    align-self: auto;
   }
 }
