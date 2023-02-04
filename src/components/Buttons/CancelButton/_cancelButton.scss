@@ -17,6 +17,10 @@
 
   transition: all 0.3s ease-in-out;
 
+  img {
+    width: $one-quarter-rem;
+  }
+
   &:hover {
     background-color: $clr-terciary;
   }

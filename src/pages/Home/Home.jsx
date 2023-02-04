@@ -7,8 +7,8 @@ import { useBookmark } from '../../contexts/BookmarkContext';
 import BoomarkList from '../../components/BookmarkList/BookmarkList';
 import DeleteAllButton from '../../components/Buttons/DeleteAllButton/DeleteAllButton';
 import Form from '../../components/Form/Form';
-import Pagination from '../../components/Pagination/Pagination';
 import Title from '../../components/Header/Header';
+import Pagination from '../../components/Pagination/Pagination';
 
 function Home() {
   const { bookmarks } = useBookmark();
@@ -30,18 +30,21 @@ function Home() {
       <div className='separator'></div>
 
       <main>
-        <BoomarkList currentPage={currentPage} itemsPerPage={bookmarksPerPage} />
+        <BoomarkList
+          currentPage={currentPage}
+          itemsPerPage={bookmarksPerPage}
+        />
         <DeleteAllButton />
       </main>
 
       <footer>
-      <Pagination
-        currentPage={currentPage}
-        setCurrentPage={setCurrentPage}
-        totalBookmarks={bookmarks.length}
-        bookmarksPerPage={bookmarksPerPage}
-        paginate={paginate}
-      />
+        <Pagination
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+          totalBookmarks={bookmarks.length}
+          bookmarksPerPage={bookmarksPerPage}
+          paginate={paginate}
+        />
       </footer>
     </div>
   );

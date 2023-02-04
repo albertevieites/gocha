@@ -7,12 +7,14 @@
   margin: 0 auto;
   margin-bottom: $ten-rem;
   padding: $one-rem;
-  background-color: $clr-vivid-red;
+  background-color: $clr-primary;
+  border: $quarter-rem solid $clr-dark-red;
   border-radius: $blur-rem;
 
-  color: $clr-white;
+  color: $clr-dark-red;
 
   transition: all 0.3s ease-in-out;
+
 
   button {
     width: 100%;
@@ -23,7 +25,7 @@
   }
 
   &:hover {
-    background-color: $clr-vivid-red;
+    background-color: $clr-primary;
     -webkit-box-shadow: 0 0 1rem $clr-vivid-red;
 		box-shadow: 0 0 1rem $clr-vivid-red;
   }
