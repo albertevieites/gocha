@@ -1,14 +1,19 @@
-@forward '../../components/BookmarkCard/boomarkCard';
-@forward '../../components/BookmarkList/bookmarkList';
+// IMPORT STYLES FROM COMPONENTS FOLDER
+// Import bookmarks styles
+@forward '../../components/Bookmarks/BookmarkCard/boomarkCard';
+@forward '../../components/Bookmarks/BookmarkList/bookmarkList';
 
-// Buttons
-@forward '../../components/Buttons/CancelButton/cancelButton';
-@forward '../../components/Buttons/DeleteAllButton/deleteAllButton';
-@forward '../../components/Buttons/DeleteOneButton/deleteOneButton';
-@forward '../../components/Buttons/EditButton/editButton';
-@forward '../../components/Buttons/UpdateButton/updateButton';
+// Import navigation styles
+@forward '../../components/Navigation/Pagination/pagination';
+@forward '../../components/Navigation/Brand/brand';
 
-@forward '../../components/Layout/layout';
-@forward '../../components/Form/form';
-@forward '../../components/Pagination/pagination';
-@forward '../../components/Header/header';
+// Import tokens styles
+@forward '../../components/Tokens/Buttons/CancelButton/cancelButton';
+@forward '../../components/Tokens/Buttons/DeleteAllButton/deleteAllButton';
+@forward '../../components/Tokens/Buttons/DeleteButton/deleteButton';
+@forward '../../components/Tokens/Buttons/EditButton/editButton';
+@forward '../../components/Tokens/Buttons/UpdateButton/updateButton';
+
+// Import utils styles
+@forward '../../components/Utils/Error/error';
+@forward '../../components/Utils/Form/form';

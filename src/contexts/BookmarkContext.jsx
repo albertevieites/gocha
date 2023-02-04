@@ -1,12 +1,17 @@
+// Import modules
 import { createContext, useEffect, useState, useContext } from 'react';
 
+// Initialize createContext
 const BookmarkContext = createContext();
 
+// Customed hook to avoid calling two imports in every call
 const useBookmark = () => {
-	const context = useContext(BookmarkContext);
+  const context = useContext(BookmarkContext);
 	return context;
 }
 
+
+// The context  to handle global variables and functions
 function BookmarkWrapper({ children }) {
 	// State of bookmarks saved in the local storage
   const [savedBookmarks] = useState(localStorage.getItem('bookmarks'));
@@ -23,7 +28,7 @@ function BookmarkWrapper({ children }) {
 
 	// FUNCTIONS TO HANDLE DIFFERENT ACTIONS
   // Add bookmarks function
-  // Use a spread operator of the data to a new data
+  // Use a spread operator to add a new element to the bookmarks
   const AddBookmark = bookmark => {
     setBookmarks([...bookmarks, bookmark]);
   }

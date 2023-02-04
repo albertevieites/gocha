@@ -1,0 +1,27 @@
+@use '../../../../styles/abstracts/colors' as *;
+@use '../../../../styles/abstracts/fonts' as *;
+@use '../../../../styles/abstracts/variables' as *;
+
+
+.cancel--btn {
+  width: fit-content;
+  padding: $half-rem;
+  background-color: $clr-red;
+  border-radius: $blur-rem;
+  border-top: $one-px--size solid $clr-light-white;
+  border-left: $one-px--size solid $clr-light-white;
+  box-shadow: 0 $quarter-rem $shadow-rem $clr-box-shadow;
+  backdrop-filter: blur($blur-rem);
+
+  color: $clr-light-black;
+
+  transition: all 0.3s ease-in-out;
+
+  img {
+    width: $one-quarter-rem;
+  }
+
+  &:hover {
+    background-color: $clr-terciary;
+  }
+}
