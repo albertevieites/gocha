@@ -4,11 +4,12 @@ import { useState } from 'react';
 import { useBookmark } from '../../contexts/BookmarkContext';
 
 // Import components
-import BoomarkList from '../../components/BookmarkList/BookmarkList';
-import DeleteAllButton from '../../components/Buttons/DeleteAllButton/DeleteAllButton';
-import Form from '../../components/Form/Form';
-import Title from '../../components/Header/Header';
-import Pagination from '../../components/Pagination/Pagination';
+import BoomarkList from '../../components/Bookmarks/BookmarkList/BookmarkList';
+import DeleteAllButton from '../../components/Tokens/Buttons/DeleteAllButton/DeleteAllButton';
+import Form from '../../components/Utils/Form/Form';
+import Brand from '../../components/Navigation/Brand/Brand';
+import Pagination from '../../components/Navigation/Pagination/Pagination';
+
 
 function Home() {
   const { bookmarks } = useBookmark();
@@ -23,7 +24,7 @@ function Home() {
   return (
     <div className='home'>
       <header>
-        <Title />
+        <Brand />
         <Form />
       </header>
 

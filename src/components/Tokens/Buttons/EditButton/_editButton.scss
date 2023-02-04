@@ -1,0 +1,24 @@
+@use '../../../../styles/abstracts/colors' as *;
+@use '../../../../styles/abstracts/fonts' as *;
+@use '../../../../styles/abstracts/variables' as *;
+
+.edit--btn {
+  width: fit-content;
+  padding: $half-rem;
+  background-color: $clr-green;
+  border-radius: $blur-rem;
+  border-top: $one-px--size solid $clr-light-white;
+  border-left: $one-px--size solid $clr-light-white;
+  box-shadow: 0 $quarter-rem $shadow-rem $clr-box-shadow;
+  backdrop-filter: blur($blur-rem);
+
+  transition: all 0.3s ease-in-out;
+
+  img {
+    width: 1.25rem;
+  }
+
+  &:hover {
+    background-color: $clr-terciary;
+  }
+}
