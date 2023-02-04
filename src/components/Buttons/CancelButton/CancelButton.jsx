@@ -1,7 +1,11 @@
+import cancelIcon from '../../../assets/icons/cancel.svg';
+
 function CancelButton({handleCancelBtn}) {
   return (
     <div className="cancel--btn">
-      <button onClick={handleCancelBtn}>Cancel</button>
+      <button onClick={handleCancelBtn}>
+        <img src={cancelIcon} alt="cancel icon" />
+      </button>
     </div>
   );
 }

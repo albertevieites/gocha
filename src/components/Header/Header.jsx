@@ -1,12 +1,12 @@
 import logo from '/drop.svg';
 
-function Title() {
+function Header() {
   return (
-    <div className='title'>
+    <div className='header__container'>
       <img src={logo} alt="App logo" />
       <h1>Gotcha</h1>
     </div>
   )
 }
 
-export default Title
+export default Header;

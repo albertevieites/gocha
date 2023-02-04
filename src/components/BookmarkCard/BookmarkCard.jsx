@@ -6,6 +6,7 @@ import DeleteOneButton from '../Buttons/DeleteOneButton/DeleteOneButton';
 import EditButton from '../Buttons/EditButton/EditButton';
 import UpdateButton from '../Buttons/UpdateButton/UpdateButton';
 
+
 function BookmarkCard({ eachLink, eachBoomarkID, submitUpdate }) {
   const [isEditing, setIsEditing] = useState(false);
   const [newLink, setNewLink] = useState(eachLink);

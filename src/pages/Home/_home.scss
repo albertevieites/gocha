@@ -3,14 +3,41 @@
 @use '../../styles/abstracts/variables' as *;
 
 .home {
-  &__header {
-    display: flex;
-    gap: $three-rem;
-    justify-content: space-evenly;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-    width: 80%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: $three-rem 0;
+  header {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+
+    display: flex;
+    justify-content: space-around;
+
+    width: 100%;
+
+    padding: $two-rem 0;
+    background-color: $clr-primary;
+  }
+
+  .separator {
+    position: absolute;
+    top: $eightish-rem;
+
+    width: 100%;
+    height: 0.0625em;
+    --direction: to right;
+    background: linear-gradient(
+      var(--direction),
+      transparent,
+      $clr-light-white 50%,
+      transparent
+    );
+  }
+
+  main {
+    margin-top: $twelve-rem;
   }
 }

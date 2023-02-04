@@ -1,5 +1,7 @@
 import { useBookmark } from '../../../contexts/BookmarkContext';
 
+import deleteIcon from '../../../assets/icons/delete.svg'
+
 function DeleteOneButton() {
   const { bookmarks, DeleteBookmark } = useBookmark();
 
@@ -10,7 +12,7 @@ function DeleteOneButton() {
           DeleteBookmark(bookmarks[0].id);
         }}
       >
-        Delete
+        <img src={deleteIcon} alt="delete icon" />
       </button>
     </div>
   );

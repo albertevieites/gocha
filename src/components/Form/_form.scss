@@ -3,44 +3,59 @@
 @use '../../styles/abstracts/variables' as *;
 
 .form {
+  display: flex;
+  align-items: center;
+
   width: fit-content;
-  padding: $two-rem;
-  background-color: $clr-bg-form;
-  border-top: $one-px--size solid $clr-light-white;
-  border-left: $one-px--size solid $clr-light-white;
-  border-radius: $one-rem;
-  box-shadow: 0 $quarter-rem $shadow-rem $clr-box-shadow;
-  backdrop-filter: blur($blur-rem);
 
   color: $clr-white;
 
   h1 {
-    margin-bottom: $two-rem;
-    font-weight: $f-w-700;
+    padding-right: $quarter-rem;
+
+    font-size: $f-s-500;
+    font-weight: $f-w-500;
+  }
+
+  p {
+    margin: $two-rem auto 0;
+    padding: $one-rem;
+    border: $one-px--size solid $clr-dark-red;
+    text-align: center;
   }
 
   &__container {
     display: flex;
+    align-items: center;
 
     &--link {
       margin-right: $one-rem;
+
+      &--legend {
+        display: flex;
+        justify-content: center;
+
+        margin-bottom: $half-rem;
+      }
     }
   }
 
   input {
     height: 100%;
-    margin-right: $one-rem;
-    padding-left: $one-rem;
+
+    padding: $half-rem $one-rem;
+
     border: $one-px--size solid $clr-light-white;
-    border-radius: $one-rem;
+    border-radius: $two-rem;
   }
 
   button {
+    align-self: end;
     padding: $half-rem $one-rem;
     background-color: $clr-white;
     border-radius: $blur-rem;
 
-    font-size: $f-s-500;
+    font-size: $f-s-400;
     font-weight: $f-w-700;
     color: $clr-terciary;
 
