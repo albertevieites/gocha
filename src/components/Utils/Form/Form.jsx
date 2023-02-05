@@ -10,7 +10,7 @@ import Error from '../Error/Error';
 
 const Form = () => {
   // Customized Hook to get AddBookmark funtion from context
-  const { AddBookmark } = useBookmark();
+  const { bookmarks, AddBookmark } = useBookmark();
 
   // URL data state
   const [url, setUrl] = useState('');
@@ -36,6 +36,10 @@ const Form = () => {
     setUrl(validatedUrl);
   } */
 
+  console.log(bookmarks);
+
+  const test  = bookmarks.some(link => link.url === "eg.com");
+  console.log(test);
 
   // Function to handle submit events
   const handleSubmit = event => {
@@ -51,7 +55,7 @@ const Form = () => {
 
     try {
       console.log("Valid URL:", new URL(newUrl));
-      new URL(newUrl);
+      new URL(url);
 
       const newBookmark = {
         id: Date.now(),
@@ -88,7 +92,7 @@ const Form = () => {
           />
         </div>
 
-        <button onClick={handleSubmit}>Save it!</button>
+        <button onClick={handleSubmit}>Save</button>
       </div>
 
       {/* Render error */}

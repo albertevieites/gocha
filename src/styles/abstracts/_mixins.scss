@@ -1,0 +1,27 @@
+$breackpoints: (
+  "phones": 380px,
+  "tablet": 700px,
+  "desktop": 1024px,
+);
+
+@mixin phones {
+  @media screen and (max-width: map-get($breackpoints, "phones")) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: map-get($breackpoints, "tablet")) {
+    @content;
+  }
+}
+
+@mixin desktop{
+  @media screen and (max-width: map-get($breackpoints, "desktop")) {
+    @content;
+  }
+}
+
+
+
+

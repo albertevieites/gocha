@@ -1,12 +1,17 @@
 @use '../../../styles/abstracts/colors' as *;
+@use '../../../styles/abstracts/mixins' as *;
 @use '../../../styles/abstracts/variables' as *;
 
 .bookmark--list {
   display: grid;
   gap: $one-rem;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
 
-  width: 80%;
+  width: 85%;
   max-width: 1200px;
   margin: 0 auto $three-rem;
+
+  @include phones {
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  }
 }

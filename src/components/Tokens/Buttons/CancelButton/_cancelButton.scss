@@ -6,14 +6,12 @@
 .cancel--btn {
   width: fit-content;
   padding: $half-rem;
-  background-color: $clr-red;
+  background-color: $clr--orange;
   border-radius: $blur-rem;
   border-top: $one-px--size solid $clr-light-white;
   border-left: $one-px--size solid $clr-light-white;
   box-shadow: 0 $quarter-rem $shadow-rem $clr-box-shadow;
   backdrop-filter: blur($blur-rem);
-
-  color: $clr-light-black;
 
   transition: all 0.3s ease-in-out;
 

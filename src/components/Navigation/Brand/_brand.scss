@@ -1,5 +1,6 @@
 @use '../../../styles/abstracts/colors' as *;
 @use '../../../styles/abstracts/fonts' as *;
+@use '../../../styles/abstracts/mixins' as *;
 @use '../../../styles/abstracts/variables' as *;
 
 .brand {
@@ -7,6 +8,12 @@
   gap: $one-rem;
   align-items: center;
   justify-content: center;
+
+  @include tablet {
+    justify-content: flex-start;
+
+    padding-bottom: $two-rem;
+  }
 
   img {
     width:$three-rem;

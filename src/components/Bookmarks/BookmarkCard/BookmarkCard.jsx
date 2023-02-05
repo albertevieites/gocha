@@ -15,8 +15,6 @@ const BookmarkCard = ({ eachBoomarkID, eachLink, submitUpdate }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [newLink, setNewLink] = useState(eachLink);
 
-  console.log(eachBoomarkID);
-
   // handle updating
   const LinkValueChange = event => {
     setNewLink(event.target.value);
@@ -39,7 +37,7 @@ const BookmarkCard = ({ eachBoomarkID, eachLink, submitUpdate }) => {
   };
 
   return (
-    <div className='bookmark--card'>
+    <div className={isEditing ? 'bookmark--card__dark' : 'bookmark--card'}>
       {isEditing ? (
         <div className='bookmark--card__update'>
           <input type='text' value={newLink} onChange={LinkValueChange} />

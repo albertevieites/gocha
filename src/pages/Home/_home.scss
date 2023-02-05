@@ -1,5 +1,6 @@
 @use '../../styles/abstracts/colors' as *;
 @use '../../styles/abstracts/fonts' as *;
+@use '../../styles/abstracts/mixins' as *;
 @use '../../styles/abstracts/variables' as *;
 
 .home {
@@ -11,15 +12,21 @@
   header {
     position: fixed;
     top: 0;
+    left:7.5%;
     z-index: 1;
 
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 
-    width: 100%;
+    width: 85%;
 
+    margin: 0 auto;
     padding: $two-rem 0;
     background-color: $clr-primary;
+
+    @include tablet {
+      display: block;
+    }
   }
 
   .separator {
@@ -27,7 +34,7 @@
     top: $eightish-rem;
 
     width: 100%;
-    height: 0.0625em;
+    height: .0625em;
     --direction: to right;
     background: linear-gradient(
       var(--direction),
@@ -35,9 +42,21 @@
       $clr-light-white 50%,
       transparent
     );
+
+    @include tablet {
+      position: fixed;;
+      top: $fourteenish-rem;
+      z-index: 1;
+
+      height: $point-one-rem;
+    }
   }
 
   main {
-    margin-top: $thirteen-rem;
+    margin-top: $eleven-rem;
+
+    @include tablet {
+      margin-top: $seventeen-rem;
+    }
   }
 }
