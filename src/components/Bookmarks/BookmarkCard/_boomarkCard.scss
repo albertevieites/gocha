@@ -64,6 +64,8 @@
   display: flex;
   justify-content: space-between;
 
+  width: 100%;
+
   // Style to fit content to phone screen size
   @include phones {
     flex-direction: column;
@@ -73,6 +75,7 @@
 
   // Sytle input field
   input {
+    width: 70%;
     padding-top: 0.2rem;
     padding-bottom: 0.2rem;
     padding-left: $one-rem;
@@ -85,6 +88,7 @@
 
     // Style to fit content to phone screen size
     @include phones {
+      width: 100%;
       margin-bottom: $one-rem;
       padding-top: 0.5rem;
       padding-bottom: 0.5rem;
@@ -106,10 +110,6 @@
 
 // Sytling updating card
 .bookmark--card__dark {
-  display: flex;
-  justify-content: space-between;
-
-  height: fit-content;
   padding: $one-rem;
 
   background: $clr-bg-dark-card;
