@@ -39,7 +39,7 @@
     // Line between header and list
     // Gradient on the line edges
     width: 100%;
-    height: 0.0625em;
+    height: $point-one-rem;
     --direction: to right;
     background: linear-gradient(
       var(--direction),
@@ -51,8 +51,8 @@
     // Style to fit content to tablet screen size
     @include tablet {
       position: fixed;
-      top: $fourteen-half-rem;
-      z-index: 1;
+      top: 14.7rem;
+      z-index: 5;
 
       height: $point-one-rem;
     }
