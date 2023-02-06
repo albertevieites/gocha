@@ -9,7 +9,7 @@
   gap: $one-rem;
   // To handle the size of columns
   // Each 304px column add a column with a fraction
-  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax($nineteen-rem, 1fr));
 
   width: 85%;
   max-width: 1200px;
