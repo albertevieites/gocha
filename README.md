@@ -1,0 +1,39 @@
+<p align="center">
+<img width="10%" src="./public//drop.svg">
+</p>
+
+<h1 align="center">Gotcha</h1>
+
+**Gotcha** is an app that allows to the users save, edit and delete favorite bookmarks. Bookmarks are validated before storing them in the database.
+
+## Stack
+- HTML
+- Sass
+- JavaScript
+- React
+
+## User Stories
+- /home - Users gain access to the /home to begin the flow.
+- Create a bookmark - Users add links to save them as bookmarks to have a personal collection of their favourite websites.
+- Edit a bookmark - Users can edit previously saved bookmarks to change or correct them.
+- Delete bookmark - Users can delete previously saved bookmarks individually to alter their bookmark list.
+- Delete all - Users can delete all bookmarks in the list with a single button.
+- Navigate the list - users can go through the list's different pages.
+- Search for bookmarks - Users can search for bookmarks in the list.
+
+## Models
+
+### Bookmarks
+
+```javascript
+{
+  id: Date;
+  url: String;
+}
+```
+
+### Deployment
+
+<a href="https://phantom-links-app.vercel.app/">
+  <svg aria-label="Vercel Logotype" fill="black" height="35" width="155" viewBox="0 0 283 64" width="283"><path d="M141.68 16.25c-11.04 0-19 7.2-19 18s8.96 18 20 18c6.67 0 12.55-2.64 16.19-7.09l-7.65-4.42c-2.02 2.21-5.09 3.5-8.54 3.5-4.79 0-8.86-2.5-10.37-6.5h28.02c.22-1.12.35-2.28.35-3.5 0-10.79-7.96-17.99-19-17.99zm-9.46 14.5c1.25-3.99 4.67-6.5 9.45-6.5 4.79 0 8.21 2.51 9.45 6.5h-18.9zm117.14-14.5c-11.04 0-19 7.2-19 18s8.96 18 20 18c6.67 0 12.55-2.64 16.19-7.09l-7.65-4.42c-2.02 2.21-5.09 3.5-8.54 3.5-4.79 0-8.86-2.5-10.37-6.5h28.02c.22-1.12.35-2.28.35-3.5 0-10.79-7.96-17.99-19-17.99zm-9.45 14.5c1.25-3.99 4.67-6.5 9.45-6.5 4.79 0 8.21 2.51 9.45 6.5h-18.9zm-39.03 3.5c0 6 3.92 10 10 10 4.12 0 7.21-1.87 8.8-4.92l7.68 4.43c-3.18 5.3-9.14 8.49-16.48 8.49-11.05 0-19-7.2-19-18s7.96-18 19-18c7.34 0 13.29 3.19 16.48 8.49l-7.68 4.43c-1.59-3.05-4.68-4.92-8.8-4.92-6.07 0-10 4-10 10zm82.48-29v46h-9v-46h9zM37.59.25l36.95 64H.64l36.95-64zm92.38 5l-27.71 48-27.71-48h10.39l17.32 30 17.32-30h10.39zm58.91 12v9.69c-1-.29-2.06-.49-3.2-.49-5.81 0-10 4-10 10v14.8h-9v-34h9v9.2c0-5.08 5.91-9.2 13.2-9.2z"></path></svg>
+</a>
