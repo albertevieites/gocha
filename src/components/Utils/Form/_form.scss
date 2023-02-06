@@ -1,3 +1,4 @@
+// Import variables
 @use '../../../styles/abstracts/colors' as *;
 @use '../../../styles/abstracts/fonts' as *;
 @use '../../../styles/abstracts/mixins' as *;
@@ -55,10 +56,12 @@
 
     transition: all 0.3s ease-in-out;
 
+    // Style to fit content to tablet screen size
     @include tablet {
-      font-size: .9rem;
+      font-size: 0.9rem;
     }
 
+    // Change the background color of the data when mouse is on the button
     &:hover {
       background-color: $clr-green;
 
@@ -73,6 +76,7 @@
     &--link {
       margin-right: $one-rem;
 
+      // Style to fit content to tablet screen size
       @include tablet {
         width: 100%;
         margin-right: $quarter-rem;
@@ -83,7 +87,7 @@
         justify-content: center;
 
         margin-bottom: $half-rem;
-
+        // Style to fit content to tablet screen size
         @include tablet {
           justify-content: flex-start;
         }

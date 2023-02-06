@@ -50,20 +50,22 @@ const BoomarkList = ({ currentPage, itemsPerPage }) => {
     LastBookmarkIndex
   );
 
-  // Filter the current bookmarks
+  // Filter the current bookmarks updating the findQuery state
+  // Getting the value of the searchbar from by lifting state up(passing state from the SearchBar child to BookmarkList fhater)
   const filterBookmarks = find => {
     setFindQuery(find);
   };
 
-  // Go through each page data. In this case the current page.
+  // Go through each page data. In this case the current page
   return (
     <>
       <SearchBar filterBookmarks={filterBookmarks} />
       <div className='bookmark--list'>
-        {/* Passing some props to BookmarkCard child */}
-        {/* Passing id value, url value and the function to udpate the bookmark */}
+        {/* Ternary to show the list of bookmarks or searched bookmarks */}
         {!findQuery ? (
           <>
+            {/* Passing some props to BookmarkCard child */}
+            {/* Passing id value, url value and the function to udpate the bookmark */}
             {currentBookmarks.map(bookmark => {
               return (
                 <BookmarkCard
@@ -77,8 +79,11 @@ const BoomarkList = ({ currentPage, itemsPerPage }) => {
           </>
         ) : (
           <>
+            {/* Rendering bookmarks that are searched */}
             {bookmarks
+              // Filtered bookmarks that are being filtered
               .filter(bookmark => bookmark.url.includes(findQuery))
+              // Show the matching bookmarks
               .map(bookmark => {
                 return (
                   <BookmarkCard key={bookmark.id} eachLink={bookmark.url} />
@@ -86,8 +91,6 @@ const BoomarkList = ({ currentPage, itemsPerPage }) => {
               })}
           </>
         )}
-
-        <hr />
       </div>
     </>
   );

@@ -1,7 +1,9 @@
+// Import variables
 @use '../../../../styles/abstracts/colors' as *;
 @use '../../../../styles/abstracts/fonts' as *;
 @use '../../../../styles/abstracts/variables' as *;
 
+// Delete a single bookmark component styling
 .one--btn {
   width: fit-content;
   padding: $half-rem;
@@ -17,6 +19,7 @@
     width: $one-quarter-rem;
   }
 
+  // Change the background color of the data when mouse is on the button
   &:hover {
     background-color: $clr-terciary;
   }

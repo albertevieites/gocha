@@ -2,7 +2,7 @@
 import logo from '/drop.svg';
 
 // Brand component styling
-function Brand() {
+const Brand = () => {
   return (
     <div className='brand'>
       <img src={logo} alt="App logo" />
