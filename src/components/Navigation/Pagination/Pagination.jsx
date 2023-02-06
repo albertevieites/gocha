@@ -5,6 +5,7 @@ import { useBookmark } from '../../../contexts/BookmarkContext';
 import nextIcon from '../../../assets/icons/next.svg';
 import previousIcon from '../../../assets/icons/previous.svg';
 
+// Passing values by props from Home component(father component)
 function Pagination({
   currentPage,
   setCurrentPage,
@@ -12,21 +13,26 @@ function Pagination({
   bookmarksPerPage,
   paginate
 }) {
+  // Passing state of database by context
   const { bookmarks } = useBookmark();
 
+  // Initialize pagination with a empty array
   const pages = [];
 
+  // Loop as many times as the number of total bookmarks divided by the number of bookmarks per page
   for (let i = 1; i <= Math.ceil(totalBookmarks / bookmarksPerPage); i++) {
     pages.push(i);
   }
 
-  // Functions
+  // Function to handle go forward pagination
   const handleNext = () => {
+    // Condition to advance if the number of the size of database divided by the number of bookmarks per page is different than the number of the current page
     if (currentPage !== Math.ceil(bookmarks.length / bookmarksPerPage)) {
       setCurrentPage(currentPage + 1);
     }
   };
 
+  // Function to handle go back pagination
   const handlePrev = () => {
     if (currentPage !== 1) {
       setCurrentPage(currentPage - 1);

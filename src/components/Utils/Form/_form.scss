@@ -1,5 +1,6 @@
 @use '../../../styles/abstracts/colors' as *;
 @use '../../../styles/abstracts/fonts' as *;
+@use '../../../styles/abstracts/mixins' as *;
 @use '../../../styles/abstracts/variables' as *;
 
 .form {
@@ -8,6 +9,10 @@
   align-items: center;
 
   color: $clr-white;
+
+  @include tablet {
+    display: block;
+  }
 
   h1 {
     padding-right: $quarter-rem;
@@ -30,6 +35,12 @@
 
     border: $one-px--size solid $clr-light-white;
     border-radius: $two-rem;
+
+    @include tablet {
+      width: 97%;
+
+      font-size: $f-s-380;
+    }
   }
 
   button {
@@ -43,6 +54,10 @@
     color: $clr-terciary;
 
     transition: all 0.3s ease-in-out;
+
+    @include tablet {
+      font-size: .9rem;
+    }
 
     &:hover {
       background-color: $clr-green;
@@ -58,11 +73,20 @@
     &--link {
       margin-right: $one-rem;
 
+      @include tablet {
+        width: 100%;
+        margin-right: $quarter-rem;
+      }
+
       &--legend {
         display: flex;
         justify-content: center;
 
         margin-bottom: $half-rem;
+
+        @include tablet {
+          justify-content: flex-start;
+        }
       }
     }
   }

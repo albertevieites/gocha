@@ -1,12 +1,22 @@
+// Import variables
 @use '../../../styles/abstracts/colors' as *;
+@use '../../../styles/abstracts/mixins' as *;
 @use '../../../styles/abstracts/variables' as *;
 
+// Bookmark list component style
 .bookmark--list {
   display: grid;
   gap: $one-rem;
-  grid-template-columns: repeat(3, 1fr);
+  // To handle the size of columns
+  // Each 304px column add a column with a fraction
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
 
-  width: 80%;
+  width: 85%;
   max-width: 1200px;
   margin: 0 auto $three-rem;
+
+  // Style to fit content to phone screen size
+  @include phones {
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  }
 }

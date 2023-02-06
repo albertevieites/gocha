@@ -7,6 +7,7 @@ import DeleteButton from '../../Tokens/Buttons/DeleteButton/DeleteButton';
 import EditButton from '../../Tokens/Buttons/EditButton/EditButton';
 import UpdateButton from '../../Tokens/Buttons/UpdateButton/UpdateButton';
 
+
 // Pass by props id and url variables and submitUpdate function
 const BookmarkCard = ({ eachBoomarkID, eachLink, submitUpdate }) => {
   // States variables
@@ -15,44 +16,56 @@ const BookmarkCard = ({ eachBoomarkID, eachLink, submitUpdate }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [newLink, setNewLink] = useState(eachLink);
 
-  console.log(eachBoomarkID);
-
-  // handle updating
+  // Function to handle updating form value
   const LinkValueChange = event => {
     setNewLink(event.target.value);
   };
 
-  // Handle rendering scopes
+  // Function to supmit the new value
   const UpdateClick = () => {
-    submitUpdate(eachBoomarkID, { id: Date.now(), url: newLink })
+    // Passing as parameters the current id and the new values of the updated element
+    submitUpdate(eachBoomarkID, { id: Date.now(), url: newLink });
+    // Change the isEditing state to show the block of code to show the default card
     setIsEditing(false);
   };
 
-  // FUNCIONA
-  const CancelClick = () => {
-    setIsEditing(false);
-  };
-
-  // FUNCIONA
+  // Function to go to the update card
   const EditClick = () => {
+    // Function to show the block of code to update the data field
     setIsEditing(true);
   };
 
+  // Function to cancel the action of update data
+  const CancelClick = () => {
+    // Function to return to the previous state which is the default card
+    setIsEditing(false);
+  };
+
+  // Render of block of code depending if the isEditing state is true of false
+  // True shows the update card(dark card) and false shows the default card
   return (
-    <div className='bookmark--card'>
+    // Ternary to change the class depending on the isEditing state
+    <div className={isEditing ? 'bookmark--card__dark' : 'bookmark--card'}>
+      {/* Ternary to show the block of code depending on the isEditing state  */}
+      {/* Show default card or update card  */}
       {isEditing ? (
         <div className='bookmark--card__update'>
+          {/* Pass the id value received from props */}
+          {/* Pass the function to handle the event that change the value */}
           <input type='text' value={newLink} onChange={LinkValueChange} />
-          <div className="bookmark--card__update--buttons">
+          <div className='bookmark--card__update--buttons'>
+            {/* Pass the functions to handle updating and cancel actions of the buttons */}
             <UpdateButton handleUpdateBtn={UpdateClick} />
             <CancelButton handleCancelBtn={CancelClick} />
           </div>
         </div>
       ) : (
         <>
+          {/* Pass the id value received from props */}
           <a href={eachLink}>{eachLink}</a>
-          <div className="bookmark--card__edit">
-            <div className="bookmark--card__edit--buttons">
+          <div className='bookmark--card__edit'>
+            <div className='bookmark--card__edit--buttons'>
+              {/* Pass the functions to handle editing and delete actions of the buttons */}
               <EditButton handleEditBtn={EditClick} />
               <DeleteButton eachBoomarkID={eachBoomarkID} />
             </div>
@@ -61,6 +74,6 @@ const BookmarkCard = ({ eachBoomarkID, eachLink, submitUpdate }) => {
       )}
     </div>
   );
-}
+};
 
 export default BookmarkCard;

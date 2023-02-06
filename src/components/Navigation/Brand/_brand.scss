@@ -1,12 +1,22 @@
+// Import variables
 @use '../../../styles/abstracts/colors' as *;
 @use '../../../styles/abstracts/fonts' as *;
+@use '../../../styles/abstracts/mixins' as *;
 @use '../../../styles/abstracts/variables' as *;
 
+// Brand component styling
 .brand {
   display: flex;
   gap: $one-rem;
   align-items: center;
   justify-content: center;
+
+  // Style to fit content to tablet screen size
+  @include tablet {
+    justify-content: flex-start;
+
+    padding-bottom: $two-rem;
+  }
 
   img {
     width:$three-rem;

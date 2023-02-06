@@ -1,19 +1,18 @@
+// Import variables
 @use '../../../../styles/abstracts/colors' as *;
 @use '../../../../styles/abstracts/fonts' as *;
 @use '../../../../styles/abstracts/variables' as *;
 
-
+// Cancel button component styling
 .cancel--btn {
   width: fit-content;
   padding: $half-rem;
-  background-color: $clr-red;
+  background-color: $clr--orange;
   border-radius: $blur-rem;
   border-top: $one-px--size solid $clr-light-white;
   border-left: $one-px--size solid $clr-light-white;
   box-shadow: 0 $quarter-rem $shadow-rem $clr-box-shadow;
   backdrop-filter: blur($blur-rem);
-
-  color: $clr-light-black;
 
   transition: all 0.3s ease-in-out;
 
@@ -21,6 +20,7 @@
     width: $one-quarter-rem;
   }
 
+  // Cahnge the background color of the data when mouse is on the button
   &:hover {
     background-color: $clr-terciary;
   }

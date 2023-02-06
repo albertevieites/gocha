@@ -1,61 +1,136 @@
 // Import variables
 @use '../../../styles/abstracts/colors' as *;
 @use '../../../styles/abstracts/fonts' as *;
+@use '../../../styles/abstracts/mixins' as *;
 @use '../../../styles/abstracts/variables' as *;
 
-
+// Bookamrk card component styling
 .bookmark--card {
   display: flex;
   align-items: center;
   justify-content: space-between;
 
+  width: 100%;
   padding: $one-rem;
 
-  // Styling border and shadow effects of the card
   background: $clr-bg-card;
+  // Styling border and shadow effects of the card
   border-top: $one-px--size solid $clr-light-white;
   border-left: $one-px--size solid $clr-light-white;
   border-radius: $one-rem;
   box-shadow: 0 $quarter-rem $shadow-rem $clr-box-shadow;
   backdrop-filter: blur($blur-rem);
 
+  // Transition between default card and update card
+  transition: all 0.3s ease-in-out;
+
+  // Anchor styling
   a {
     font-size: $f-s-400;
     font-weight: $f-w-600;
     color: $clr-secondary;
+
+    overflow: hidden;
+
+    // Style to fit content to phone screen size
+    @include phones {
+      font-size: $f-s-340;
+    }
   }
 }
 
+// Edit card
 .bookmark--card__edit {
+  display: flex;
+  justify-content: space-between;
+
+  // Style to fit content to phone screen size
+  @include phones {
+    width: 30%;
+
+    transition: all 0.3s ease-in-out;
+  }
+
+  // Sytle of buttons of the default card
   &--buttons {
     display: flex;
-    gap: $one-rem;
+    gap: $half-rem;
+
+    width: $five-rem;
   }
 }
 
+// Updating card
 .bookmark--card__update {
   display: flex;
-  align-items: center;
   justify-content: space-between;
 
   width: 100%;
 
-  input {
-    padding-top: .2rem;
-    padding-bottom: .2rem;
-    padding-left: $one-rem;
+  // Style to fit content to phone screen size
+  @include phones {
+    flex-direction: column;
 
+    transition: all 0.3s ease-in-out;
+  }
+
+  // Sytle input field
+  input {
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    padding-left: $one-rem;
     border: $one-px--size solid $clr-light-white;
     border-radius: $one-rem;
 
     font-size: $f-s-380;
     font-weight: $f-w-400;
     color: $clr-secondary;
+
+    // Style to fit content to phone screen size
+    @include phones {
+      margin-bottom: $one-rem;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
   }
 
+  // Style buttons of the updating card
   &--buttons {
     display: flex;
-    gap: $one-rem;
+    gap: $half-rem;
 
+    // Style to fit content to phone screen size
+    @include phones {
+      width: $five-rem;
+      margin: 0 auto;
+    }
+  }
+}
+
+// Sytling updating card 
+.bookmark--card__dark {
+  display: flex;
+  justify-content: space-between;
+
+  height: fit-content;
+  padding: $one-rem;
+
+  background: $clr-bg-dark-card;
+  // Styling border and shadow effects of the card
+  border-radius: $one-rem;
+
+  transition: all 0.3s ease-in-out;
+
+  // Style to fit content to phone screen size
+  @include phones {
+    width: 100%;
+    margin: 0 auto;
+
+    transition: all 0.1s ease-in-out;
+  }
+
+  // Style the color of the text of the input field
+  input {
+    color: $clr-white;
   }
 }
