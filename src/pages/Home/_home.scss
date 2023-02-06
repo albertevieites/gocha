@@ -33,7 +33,7 @@
 
   .separator {
     // Relative positioning to home box
-    position: absolute;
+    position: fixed;
     top: $eightish-rem;
 
     // Line between header and list
@@ -51,7 +51,7 @@
     // Style to fit content to tablet screen size
     @include tablet {
       position: fixed;
-      top: $fourteenish-rem;
+      top: $fourteen-half-rem;
       z-index: 1;
 
       height: $point-one-rem;

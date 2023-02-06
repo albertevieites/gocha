@@ -10,7 +10,6 @@
   align-items: center;
   justify-content: space-between;
 
-  width: 100%;
   padding: $one-rem;
 
   background: $clr-bg-card;
@@ -65,8 +64,6 @@
   display: flex;
   justify-content: space-between;
 
-  width: 100%;
-
   // Style to fit content to phone screen size
   @include phones {
     flex-direction: column;
@@ -107,7 +104,7 @@
   }
 }
 
-// Sytling updating card 
+// Sytling updating card
 .bookmark--card__dark {
   display: flex;
   justify-content: space-between;
