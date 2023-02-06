@@ -1,5 +1,7 @@
+// Import image
 import logo from '/drop.svg';
 
+// Brand component styling
 function Brand() {
   return (
     <div className='brand'>

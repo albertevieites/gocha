@@ -1,0 +1,19 @@
+@use '../../../styles/abstracts/colors' as *;
+@use '../../../styles/abstracts/fonts' as *;
+@use '../../../styles/abstracts/mixins' as *;
+@use '../../../styles/abstracts/variables' as *;
+
+.search--bar {
+  input {
+    width: 30rem;
+    margin: 0 auto $two-rem;
+    padding: $half-rem $one-rem;
+
+    border: $one-px--size solid $clr-light-white;
+    border-radius: $two-rem;
+
+    @include tablet {
+      width: 85%;
+    }
+  }
+}

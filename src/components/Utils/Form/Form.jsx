@@ -16,60 +16,58 @@ const Form = () => {
   const [url, setUrl] = useState('');
   const [error, setError] = useState('');
 
-  // Function to handle events
+  // Function to get the value from the form
+  // Getting the url state
   const handleOnChange = event => {
-    setUrl(event.target.value);
+    let newUrl = event.target.value;
+
+    // Check if the url begins with 'http://' or 'https://'
+    // If not, add 'http://' at the beginning of the url
+    if (newUrl.indexOf('http://') !== 0 && newUrl.indexOf('https://') !== 0) {
+      newUrl = 'http://www.' + newUrl;
+    } else {
+      setUrl('');
+    }
+
+    setUrl(newUrl);
   };
 
-  // VALIDATION
-  // Check if the Url has 'https://' or 'http://' prefix
-  /* const TestUrl = (url) => {
-    const addHttp = url => {
-      if (!url.startsWith('http://') && !url.startsWith('https://')) {
-        url = 'http://' + url;
-      }
-      return url;
-    };
-    const newUrl = addHttp(url);
-    const validatedUrl = new URL(newUrl);
+  // Function to send the data to the database clicking enter key button
+  const onKeyDown = event => {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      event.stopPropagation();
+      handleSubmit(event);
+    }
+  };
 
-    setUrl(validatedUrl);
-  } */
-
-  console.log(bookmarks);
-
-  const test  = bookmarks.some(link => link.url === "eg.com");
-  console.log(test);
 
   // Function to handle submit events
   const handleSubmit = event => {
     event.preventDefault();
 
-    let newUrl = url;
-    if (!newUrl.startsWith('http://') && !newUrl.startsWith('https://')) {
-      newUrl = 'http://' + newUrl;
-    }
-    console.log("newUrl:", newUrl);
-    // Check if the URL doesn't have a prefix
+    const checkDatabase = bookmarks.some(link => link.url === url);
 
+    if (!checkDatabase) {
+      try {
+        new URL(url);
 
-    try {
-      console.log("Valid URL:", new URL(newUrl));
-      new URL(url);
+        const newBookmark = {
+          id: Date.now(),
+          url
+        };
 
-      const newBookmark = {
-        id: Date.now(),
-        url
-      };
+        // Add the bookmark
+        AddBookmark(newBookmark);
 
-      // Add the bookmark
-      AddBookmark(newBookmark);
-
-      // Clear the form
-      setUrl('');
-      setError('');
-    } catch (err) {
-      setError('Invalid URL. Please enter a valid URL.');
+        // Clear the form
+        setUrl('');
+        setError('');
+      } catch (err) {
+        setError('Invalid URL. Please enter a valid URL.');
+      }
+    } else {
+      setError('The URL is already in the database');
     }
   };
 
@@ -89,6 +87,7 @@ const Form = () => {
             value={url}
             placeholder='URL'
             onChange={handleOnChange}
+            onKeyDown={onKeyDown}
           />
         </div>
 

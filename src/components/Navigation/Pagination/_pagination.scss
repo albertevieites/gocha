@@ -1,8 +1,11 @@
+// Import variables
 @use '../../../styles/abstracts/colors' as *;
 @use '../../../styles/abstracts/fonts' as *;
 @use '../../../styles/abstracts/variables' as *;
 
+// Pagination styling
 .pagination {
+  // Fixing the component at the bottom of the page
   position: fixed;
   bottom: 0;
   left: 0;
@@ -39,6 +42,7 @@
   }
 
   &__item {
+    // Styling the default number of page navigation when there is not any bookmark in the list
     &--base {
       padding: 0.5rem;
       background-color: $clr-terciary;
@@ -52,6 +56,7 @@
     }
   }
 
+  // Styling the number of the current page
   .selectedPage {
     padding: 0.5rem;
     background-color: $clr-terciary;
