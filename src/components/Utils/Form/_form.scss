@@ -30,18 +30,22 @@
   }
 
   input {
-    height: 100%;
-
+    width: $twenty-rem;
     padding: $half-rem $one-rem;
 
     border: $one-px--size solid $clr-light-white;
     border-radius: $two-rem;
 
-    @include tablet {
-      width: 97%;
+    color: $clr-terciary;
 
-      font-size: $f-s-380;
+    @include tablet {
+      width: 98%;
     }
+  }
+
+  ::placeholder {
+    font-weight: $f-w-600;
+    color: $clr-secondary;
   }
 
   button {
@@ -55,11 +59,6 @@
     color: $clr-terciary;
 
     transition: all 0.3s ease-in-out;
-
-    // Style to fit content to tablet screen size
-    @include tablet {
-      font-size: 0.9rem;
-    }
 
     // Change the background color of the data when mouse is on the button
     &:hover {
@@ -84,7 +83,6 @@
 
       &--legend {
         display: flex;
-        justify-content: center;
 
         margin-bottom: $half-rem;
         // Style to fit content to tablet screen size

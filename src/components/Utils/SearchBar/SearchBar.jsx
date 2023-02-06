@@ -1,6 +1,9 @@
 // Import from node modules
 import { useState } from 'react';
 
+// Import image
+import SearchIcon from '../../../assets/icons/search.svg';
+
 // Passing a state using Lifting Sate Up
 // Passing find state from the child of BookmarkList component
 const SearchBar = props => {
@@ -21,7 +24,9 @@ const SearchBar = props => {
   return (
     <div className='search--bar'>
       {/* Invoke handleSearch function when the value in changing in the search field */}
-      <input type='text' placeholder='Search' onChange={handleSearch}></input>
+      <img src={SearchIcon} alt="search icon" />
+      <input type='text' placeholder='Search' onChange={handleSearch}>
+      </input>
     </div>
   );
 };

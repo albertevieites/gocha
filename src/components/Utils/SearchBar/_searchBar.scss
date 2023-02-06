@@ -5,16 +5,26 @@
 @use '../../../styles/abstracts/variables' as *;
 
 .search--bar {
+  display: flex;
+  gap: $quarter-rem;
+  justify-content: center;
+
+  margin-bottom: 2rem;
+
   input {
-    width: 30rem;
-    margin: 0 auto $two-rem;
+    width: $fifteen-rem;
     padding: $half-rem $one-rem;
 
     border: $one-px--size solid $clr-light-white;
     border-radius: $two-rem;
-    // Style to fit content to tablet screen size
-    @include tablet {
-      width: 85%;
+
+    @include phones {
+      width: 13rem;
     }
+  }
+
+  ::placeholder {
+    font-weight: $f-w-600;
+    color: $clr-secondary;
   }
 }
