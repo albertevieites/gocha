@@ -15,6 +15,7 @@ const BoomarkList = ({ currentPage, itemsPerPage }) => {
 
   // Filtered data state
   const [findQuery, setFindQuery] = useState('');
+  console.log(findQuery);
 
   // Using useEffect hook to invoke the getData function every time something changes in the BookmarkList component
   useEffect(() => {
@@ -86,7 +87,12 @@ const BoomarkList = ({ currentPage, itemsPerPage }) => {
               // Show the matching bookmarks
               .map(bookmark => {
                 return (
-                  <BookmarkCard key={bookmark.id} eachLink={bookmark.url} />
+                  <BookmarkCard
+                    key={bookmark.id}
+                    eachBoomarkID={bookmark.id}
+                    eachLink={bookmark.url}
+                    submitUpdate={submitUpdate}
+                  />
                 );
               })}
           </>
