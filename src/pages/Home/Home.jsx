@@ -1,3 +1,4 @@
+// Import from node modules
 import { useState } from 'react';
 
 // Import context
@@ -5,20 +6,22 @@ import { useBookmark } from '../../contexts/BookmarkContext';
 
 // Import components
 import BoomarkList from '../../components/Bookmarks/BookmarkList/BookmarkList';
-import DeleteAllButton from '../../components/Tokens/Buttons/DeleteAllButton/DeleteAllButton';
-import Form from '../../components/Utils/Form/Form';
 import Brand from '../../components/Navigation/Brand/Brand';
 import Pagination from '../../components/Navigation/Pagination/Pagination';
+import DeleteAllButton from '../../components/Tokens/Buttons/DeleteAllButton/DeleteAllButton';
+import Form from '../../components/Utils/Form/Form';
 
-
-function Home() {
+const Home = () => {
+  // Get database values by context
+  // Global variable
   const { bookmarks } = useBookmark();
 
-  // Pagination
+  // Pagination states
+  // Maximum of 20 items per page
   const [currentPage, setCurrentPage] = useState(1);
   const [bookmarksPerPage] = useState(20);
 
-  // Change page
+  // Change current page number
   const paginate = pageNumber => setCurrentPage(pageNumber);
 
   return (
@@ -31,6 +34,7 @@ function Home() {
       <div className='separator'></div>
 
       <main>
+        {/* Pass sates to BookmarkList component */}
         <BoomarkList
           currentPage={currentPage}
           itemsPerPage={bookmarksPerPage}
@@ -39,6 +43,7 @@ function Home() {
       </main>
 
       <footer>
+        {/* Pass data to handle the number of the pagination */}
         <Pagination
           currentPage={currentPage}
           setCurrentPage={setCurrentPage}
@@ -49,6 +54,6 @@ function Home() {
       </footer>
     </div>
   );
-}
+};
 
 export default Home;

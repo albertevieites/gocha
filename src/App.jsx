@@ -1,6 +1,8 @@
 // Import dependencies
 import { Route, Routes } from 'react-router-dom';
 
+// Import context to wrap routes
+// It is important to pass variables and functions inside of context as global variables and functions
 import { BookmarkWrapper } from './contexts/BookmarkContext';
 
 // Import page components

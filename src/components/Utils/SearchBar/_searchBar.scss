@@ -1,3 +1,4 @@
+// Import variables
 @use '../../../styles/abstracts/colors' as *;
 @use '../../../styles/abstracts/fonts' as *;
 @use '../../../styles/abstracts/mixins' as *;
@@ -11,7 +12,7 @@
 
     border: $one-px--size solid $clr-light-white;
     border-radius: $two-rem;
-
+    // Style to fit content to tablet screen size
     @include tablet {
       width: 85%;
     }

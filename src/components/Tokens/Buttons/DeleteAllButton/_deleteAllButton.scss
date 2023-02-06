@@ -25,6 +25,7 @@
     text-align: center;
   }
 
+  // Change the background color of the data when mouse is on the button
   &:hover {
     background-color: $clr-primary;
     -webkit-box-shadow: 0 0 1rem $cler-red-vivid;

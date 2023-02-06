@@ -1,8 +1,11 @@
+// Import variables
 @use '../../../styles/abstracts/colors' as *;
 @use '../../../styles/abstracts/fonts' as *;
 @use '../../../styles/abstracts/variables' as *;
 
 .error {
+  // Fixing the error message in the middle of the screen on the top
+  // Between brand icon and the add bookmark form
   position: fixed;
   top: 8%;
   left: 50%;

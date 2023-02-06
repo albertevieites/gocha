@@ -1,4 +1,4 @@
-// Import modules
+// Import from node modules
 import { createContext, useContext, useEffect, useState } from 'react';
 
 // Initialize createContext
@@ -29,10 +29,12 @@ function BookmarkWrapper({ children }) {
   // Add bookmarks function
   // Use a spread operator to add a new element to the bookmarks
   const AddBookmark = bookmark => {
+    // Add a new element to the beginning of the bookmarks
     setBookmarks([bookmark, ...bookmarks]);
   };
 
   // Delete a bookmark from the list of bookmarks
+  // Passing id as parameter, filter to update the state of the bookmarks deleting that specific bookmark
   function DeleteBookmark(id) {
     setBookmarks(bookmarks.filter(bookmark => bookmark.id !== id));
   }
@@ -45,6 +47,8 @@ function BookmarkWrapper({ children }) {
 
   return (
     <BookmarkContext.Provider
+    // Pass global values
+    // States and functions
       value={{
         bookmarks,
         setBookmarks,

@@ -5,6 +5,7 @@ import cancelIcon from '../../../../assets/icons/cancel.svg';
 const CancelButton = ({ handleCancelBtn }) => {
   return (
     <div className='cancel--btn'>
+      {/* Invoke handleCancelBtn function receive from BookmarkCard component by props */}
       <button onClick={handleCancelBtn}>
         <img src={cancelIcon} alt='cancel icon' />
       </button>
