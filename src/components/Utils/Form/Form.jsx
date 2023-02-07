@@ -75,7 +75,7 @@ const Form = () => {
       }
     } else {
       // If url is in the database, show a error message
-      setError('The URL is already in the database');
+      setError('The URL is already in the database.');
     }
   };
 
