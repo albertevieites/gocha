@@ -1,23 +1,22 @@
 // Import variables
 @use '../../../styles/abstracts/colors' as *;
 @use '../../../styles/abstracts/fonts' as *;
+@use '../../../styles/abstracts/mixins' as *;
 @use '../../../styles/abstracts/variables' as *;
 
 .error {
-  // Fixing the error message in the middle of the screen on the top
-  // Between brand icon and the add bookmark form
-  position: fixed;
-  top: 8%;
-  left: 50%;
+  // Error message below the bookmark input field
+  position: absolute;
+  top: $five-rem;
+  left: $one-quarter-rem;
   z-index: 2;
-  transform: translate(-50%, -50%);
-
-  width: fit-content;
-  padding: $half-rem $one-rem;
 
   span {
-    font-size: $f-s-500;
     font-weight: $f-w-600;
     color: $clr-dark-red;
+
+    @include phones {
+      font-size: $f-s-380;
+    }
   }
 }

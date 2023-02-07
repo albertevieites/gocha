@@ -5,6 +5,8 @@
 @use '../../../styles/abstracts/variables' as *;
 
 .form {
+  position: relative;
+  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -91,10 +93,5 @@
         }
       }
     }
-  }
-
-  &__error {
-    font-weight: $f-w-600;
-    color: $clr-secondary;
   }
 }
