@@ -2,9 +2,9 @@
 <img width="10%" src="./public//drop.svg">
 </p>
 
-<h1 align="center">Gotcha</h1>
+<h1 align="center">Gocha</h1>
 
-**Gotcha** is an app that allows to the users save, edit and delete favorite bookmarks. Bookmarks are validated before storing them in the database.
+**Gocha** is an app that allows to the users save, edit and delete favorite bookmarks. Bookmarks are validated before storing them in the database.
 
 ## Stack
 - HTML
