@@ -61,7 +61,7 @@ const BoomarkList = ({ currentPage, itemsPerPage }) => {
   // Filter the current bookmarks updating the findQuery state
   // Getting the value of the searchbar from by lifting state up(passing state from the SearchBar child to BookmarkList fhater)
   const filterBookmarks = find => {
-    setFindQuery(find);
+    setFindQuery(find.toLowerCase());
   };
 
   // Handle fetching bookmarks
@@ -100,7 +100,7 @@ const BoomarkList = ({ currentPage, itemsPerPage }) => {
             {/* Rendering bookmarks that are searched */}
             {bookmarks
               // Filtered bookmarks that are being filtered
-              .filter(bookmark => bookmark.url.includes(findQuery))
+              .filter(bookmark => bookmark.url.toLowerCase().includes(findQuery))
               // Show the matching bookmarks
               .map(bookmark => {
                 return (
