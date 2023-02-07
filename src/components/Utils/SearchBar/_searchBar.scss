@@ -5,15 +5,25 @@
 @use '../../../styles/abstracts/variables' as *;
 
 .search--bar {
+  position: relative;
+
   display: flex;
   gap: $quarter-rem;
   justify-content: center;
 
   margin-bottom: 2rem;
 
+  input, img {
+    position: relative;
+  }
+
+  img {
+    left: $two-half-rem;
+  }
+
   input {
     width: $fifteen-rem;
-    padding: $half-rem $one-rem;
+    padding: $half-rem $two-half-rem;
 
     border: $one-px--size solid $clr-light-white;
     border-radius: $two-rem;
@@ -24,6 +34,9 @@
   }
 
   ::placeholder {
+    position: absolute;
+    left: $two-half-rem;
+
     font-weight: $f-w-600;
     color: $clr-secondary;
   }

@@ -25,8 +25,7 @@ const SearchBar = props => {
     <div className='search--bar'>
       {/* Invoke handleSearch function when the value in changing in the search field */}
       <img src={SearchIcon} alt="search icon" />
-      <input type='text' placeholder='Search' onChange={handleSearch}>
-      </input>
+      <input type='text' placeholder='Search' onChange={handleSearch} />
     </div>
   );
 };
