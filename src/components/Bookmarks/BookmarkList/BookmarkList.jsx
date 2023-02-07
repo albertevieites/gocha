@@ -8,10 +8,16 @@ import { useBookmark } from '../../../contexts/BookmarkContext';
 import SearchBar from '../../Utils/SearchBar/SearchBar';
 import BookmarkCard from '../BookmarkCard/BookmarkCard';
 
+// Import loading spinner
+import spinner from '../../../assets/animated/spinner.svg';
+
 // Pass by props the number of current page of the list and the number of items by page
 const BoomarkList = ({ currentPage, itemsPerPage }) => {
   // Import by context the state of the data in the local storage and the function that change the value of the state of the data storage
   const { bookmarks, setBookmarks } = useBookmark();
+
+  // Fetching data state from the local storage
+  const [isFetching, setIsFetching] = useState(true);
 
   // Filtered data state
   const [findQuery, setFindQuery] = useState('');
@@ -25,6 +31,7 @@ const BoomarkList = ({ currentPage, itemsPerPage }) => {
   // getData function updates the state of the bookmarks data in the local storage
   const getData = () => {
     setBookmarks(bookmarks);
+    setIsFetching(false);
   };
 
   // Edit a bookmark in the list of bookmarks
@@ -56,6 +63,16 @@ const BoomarkList = ({ currentPage, itemsPerPage }) => {
   const filterBookmarks = find => {
     setFindQuery(find);
   };
+
+  // Handle fetching bookmarks
+  if (isFetching === true) {
+    // If the component is searching data
+    return (
+      <div className='bookmark--list__spinner'>
+        <img src={spinner} alt='spinner gif' />
+      </div>
+    );
+  }
 
   // Go through each page data. In this case the current page
   return (
