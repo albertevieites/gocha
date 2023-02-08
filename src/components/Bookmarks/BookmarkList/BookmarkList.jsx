@@ -100,7 +100,9 @@ const BoomarkList = ({ currentPage, itemsPerPage }) => {
             {/* Rendering bookmarks that are searched */}
             {bookmarks
               // Filtered bookmarks that are being filtered
-              .filter(bookmark => bookmark.url.toLowerCase().includes(findQuery))
+              .filter(bookmark =>
+                bookmark.url.slice(4).toLowerCase().includes(findQuery)
+              )
               // Show the matching bookmarks
               .map(bookmark => {
                 return (
