@@ -4,7 +4,7 @@
 
 <h1 align="center">Gocha</h1>
 
-**Gocha** is an app that allows to the users save, edit and delete favorite bookmarks. Bookmarks are validated before storing them in the database. The local storage of the browser is used to store the bookmarks.
+**Gocha** is an app that allows users save, edit and delete favorite bookmarks. Bookmarks are validated before storing them in the database. The local storage of the browser is used to store the bookmarks.
 
 ## Stack
 - HTML
