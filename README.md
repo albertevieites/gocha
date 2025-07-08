@@ -1,6 +1,8 @@
 # Gocha - Bookmark Manager
 
-![Gocha Logo](./src/assets/drop.svg)
+<p align="center">
+  <img src="./src/assets/drop.svg" alt="Gocha Logo" width="120" height="120">
+</p>
 
 _A modern and minimalist application for managing your favourite bookmarks_
 
