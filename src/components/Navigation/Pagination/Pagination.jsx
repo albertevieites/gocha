@@ -1,5 +1,5 @@
 // Import from node modules
-import { useBookmark } from '../../../contexts/BookmarkContext';
+import { useBookmark } from '../../../hooks/useBookmark';
 
 // Import images
 import nextIcon from '../../../assets/icons/next.svg';
