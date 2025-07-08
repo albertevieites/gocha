@@ -1,19 +1,13 @@
-<p align="center">
-<img width="10%" src="./public/drop.svg">
-</p>
+# Gocha - Bookmark Manager
 
-<h1 align="center">Gocha - Bookmark Manager</h1>
+![Gocha Logo](./public/drop.svg)
 
-<p align="center">
-  <em>Una aplicación moderna y minimalista para gestionar tus bookmarks favoritos</em>
-</p>
+*Una aplicación moderna y minimalista para gestionar tus bookmarks favoritos*
 
-<p align="center">
-  <img src="https://img.shields.io/badge/React-18.2.0-61dafb?style=flat-square&logo=react" alt="React">
-  <img src="https://img.shields.io/badge/Vite-4.1.1-646cff?style=flat-square&logo=vite" alt="Vite">
-  <img src="https://img.shields.io/badge/Sass-1.58.0-cc6699?style=flat-square&logo=sass" alt="Sass">
-  <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="License">
-</p>
+![React](https://img.shields.io/badge/React-18.2.0-61dafb?style=flat-square&logo=react)
+![Vite](https://img.shields.io/badge/Vite-4.1.1-646cff?style=flat-square&logo=vite)
+![Sass](https://img.shields.io/badge/Sass-1.58.0-cc6699?style=flat-square&logo=sass)
+![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
 
 ## 📋 Descripción
 
@@ -48,12 +42,14 @@
 ### Instalación
 
 1. **Clona el repositorio**
+
    ```bash
    git clone <url-del-repositorio>
    cd gocha
    ```
 
 2. **Instala las dependencias**
+
    ```bash
    pnpm install
    # o
@@ -61,6 +57,7 @@
    ```
 
 3. **Inicia el servidor de desarrollo**
+
    ```bash
    pnpm dev
    # o
@@ -104,7 +101,7 @@ pnpm lint     # Ejecuta ESLint y corrige errores automáticamente
 
 ## 🏗️ Estructura del Proyecto
 
-```
+```text
 src/
 ├── components/
 │   ├── Bookmarks/          # Componentes relacionados con bookmarks
@@ -144,6 +141,4 @@ Este proyecto está bajo la licencia MIT. Ver el archivo `LICENSE` para más det
 
 ---
 
-<p align="center">
-  Hecho con ❤️ por el equipo de Gocha
-</p>
+*Hecho con ❤️ por el equipo de Gocha*
