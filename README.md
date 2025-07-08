@@ -1,6 +1,6 @@
 # Gocha - Bookmark Manager
 
-![Gocha Logo](./public/drop.svg)
+![Gocha Logo](./src/assets/drop.svg)
 
 *Una aplicación moderna y minimalista para gestionar tus bookmarks favoritos*
 

@@ -1,5 +1,5 @@
 // Import image
-import logo from '/drop.svg';
+import logo from '../../../assets/drop.svg';
 
 // Brand component styling
 const Brand = () => {
