@@ -2,7 +2,7 @@
 import { useState } from 'react';
 
 // Import context
-import { useBookmark } from '../../contexts/BookmarkContext';
+import { useBookmark } from '../../hooks/useBookmark';
 
 // Import components
 import BoomarkList from '../../components/Bookmarks/BookmarkList/BookmarkList';

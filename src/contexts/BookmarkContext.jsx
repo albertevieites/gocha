@@ -1,14 +1,8 @@
 // Import from node modules
-import { createContext, useContext, useEffect, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 
 // Initialize createContext
 const BookmarkContext = createContext();
-
-// Customed hook to avoid calling two imports in every call
-const useBookmark = () => {
-  const context = useContext(BookmarkContext);
-  return context;
-};
 
 // The context  to handle global variables and functions
 function BookmarkWrapper({ children }) {
@@ -62,4 +56,4 @@ function BookmarkWrapper({ children }) {
   );
 }
 
-export { BookmarkContext, BookmarkWrapper, useBookmark };
+export { BookmarkContext, BookmarkWrapper };

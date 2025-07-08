@@ -1,8 +1,8 @@
 // Import from node modules
 import { useEffect, useState } from 'react';
 
-// Import from general context
-import { useBookmark } from '../../../contexts/BookmarkContext';
+// Import custom hook
+import { useBookmark } from '../../../hooks/useBookmark';
 
 // Import component
 import SearchBar from '../../Utils/SearchBar/SearchBar';
@@ -21,18 +21,17 @@ const BoomarkList = ({ currentPage, itemsPerPage }) => {
 
   // Filtered data state
   const [findQuery, setFindQuery] = useState('');
-  console.log(findQuery);
 
   // Using useEffect hook to invoke the getData function every time something changes in the BookmarkList component
   useEffect(() => {
-    getData();
-  }, []);
+    // getData function updates the state of the bookmarks data in the local storage
+    const getData = () => {
+      setBookmarks(bookmarks);
+      setIsFetching(false);
+    };
 
-  // getData function updates the state of the bookmarks data in the local storage
-  const getData = () => {
-    setBookmarks(bookmarks);
-    setIsFetching(false);
-  };
+    getData();
+  }, [bookmarks, setBookmarks]);
 
   // Edit a bookmark in the list of bookmarks
   // Passing as parameters id and value to updated the bookmark
@@ -40,7 +39,7 @@ const BoomarkList = ({ currentPage, itemsPerPage }) => {
     // Update local storage with a new value
     setBookmarks(
       // Go through the data base to update the sate of the database with a new value
-      bookmarks.map(eachMark => (eachMark.id === id ? newValue : eachMark))
+      bookmarks.map(eachMark => (eachMark.id === id ? newValue : eachMark)),
     );
   }
 
@@ -55,7 +54,7 @@ const BoomarkList = ({ currentPage, itemsPerPage }) => {
   const FirstBookmarkIndex = LastBookmarkIndex - itemsPerPage;
   const currentBookmarks = bookmarks.slice(
     FirstBookmarkIndex,
-    LastBookmarkIndex
+    LastBookmarkIndex,
   );
 
   // Filter the current bookmarks updating the findQuery state
@@ -101,7 +100,7 @@ const BoomarkList = ({ currentPage, itemsPerPage }) => {
             {bookmarks
               // Filtered bookmarks that are being filtered
               .filter(bookmark =>
-                bookmark.url.slice(4).toLowerCase().includes(findQuery)
+                bookmark.url.slice(4).toLowerCase().includes(findQuery),
               )
               // Show the matching bookmarks
               .map(bookmark => {
