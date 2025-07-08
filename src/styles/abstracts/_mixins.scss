@@ -1,3 +1,6 @@
+// Import Sass map module for modern syntax
+@use 'sass:map';
+
 // Screen sizes
 $breackpoints: (
   "phones": 380px,
@@ -6,19 +9,19 @@ $breackpoints: (
 );
 
 @mixin phones {
-  @media screen and (max-width: map-get($breackpoints, "phones")) {
+  @media screen and (max-width: map.get($breackpoints, "phones")) {
     @content;
   }
 }
 
 @mixin tablet {
-  @media screen and (max-width: map-get($breackpoints, "tablet")) {
+  @media screen and (max-width: map.get($breackpoints, "tablet")) {
     @content;
   }
 }
 
 @mixin desktop{
-  @media screen and (max-width: map-get($breackpoints, "desktop")) {
+  @media screen and (max-width: map.get($breackpoints, "desktop")) {
     @content;
   }
 }
