@@ -2,143 +2,143 @@
 
 ![Gocha Logo](./src/assets/drop.svg)
 
-*Una aplicación moderna y minimalista para gestionar tus bookmarks favoritos*
+_A modern and minimalist application for managing your favourite bookmarks_
 
 ![React](https://img.shields.io/badge/React-18.2.0-61dafb?style=flat-square&logo=react)
-![Vite](https://img.shields.io/badge/Vite-4.1.1-646cff?style=flat-square&logo=vite)
+![Vite](https://img.shields.io/badge/Vite-6.0.0-646cff?style=flat-square&logo=vite)
 ![Sass](https://img.shields.io/badge/Sass-1.58.0-cc6699?style=flat-square&logo=sass)
 ![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
 
-## 📋 Descripción
+## 📋 Description
 
-**Gocha** es una aplicación web que permite a los usuarios guardar, editar y eliminar sus bookmarks favoritos. La aplicación valida las URLs antes de almacenarlas y utiliza el localStorage del navegador para la persistencia de datos.
+**Gocha** is a web application that allows users to save, edit, and delete their favourite bookmarks. The application validates URLs before storing them and uses the browser's localStorage for data persistence.
 
-## ✨ Características
+## ✨ Features
 
-- 🔖 **Gestión completa de bookmarks**: Crear, editar y eliminar
-- 🔍 **Búsqueda inteligente**: Encuentra tus bookmarks rápidamente
-- 📄 **Paginación**: Navegación eficiente con 20 items por página
-- 🗑️ **Eliminación masiva**: Borra todos los bookmarks con un clic
-- ✅ **Validación de URLs**: Verifica que las URLs sean válidas antes de guardar
-- 💾 **Persistencia local**: Los datos se guardan en localStorage
-- 📱 **Diseño responsivo**: Funciona en dispositivos móviles y desktop
+- 🔖 **Complete bookmark management**: Create, edit, and delete
+- 🔍 **Smart search**: Find your bookmarks quickly
+- 📄 **Pagination**: Efficient navigation with 20 items per page
+- 🗑️ **Bulk deletion**: Clear all bookmarks with a single click
+- ✅ **URL validation**: Verifies URLs are valid before saving
+- 💾 **Local persistence**: Data is saved in localStorage
+- 📱 **Responsive design**: Works on mobile and desktop devices
 
-## 🛠️ Stack Tecnológico
+## 🛠️ Technology Stack
 
 - **Frontend Framework**: React 18.2.0
-- **Build Tool**: Vite 4.1.1
+- **Build Tool**: Vite 6.0.0
 - **Routing**: React Router DOM 6.8.0
 - **Styling**: Sass/SCSS
 - **HTTP Client**: Axios 1.3.2
 - **Code Quality**: ESLint + Prettier
 
-## 🚀 Instalación y Uso
+## 🚀 Installation and Usage
 
-### Prerrequisitos
+### Prerequisites
 
-- Node.js (versión 16 o superior)
-- pnpm (recomendado) o npm
+- Node.js (version 16 or higher)
+- pnpm (recommended) or npm
 
-### Instalación
+### Installation
 
-1. **Clona el repositorio**
+1. **Clone the repository**
 
    ```bash
-   git clone <url-del-repositorio>
+   git clone <repository-url>
    cd gocha
    ```
 
-2. **Instala las dependencias**
+2. **Install dependencies**
 
    ```bash
    pnpm install
-   # o
+   # or
    npm install
    ```
 
-3. **Inicia el servidor de desarrollo**
+3. **Start the development server**
 
    ```bash
    pnpm dev
-   # o
+   # or
    npm run dev
    ```
 
-4. **Abre tu navegador** en `http://localhost:3000`
+4. **Open your browser** at `http://localhost:3000`
 
-### Scripts disponibles
+### Available Scripts
 
 ```bash
-pnpm dev      # Inicia el servidor de desarrollo
-pnpm build    # Construye la aplicación para producción
-pnpm preview  # Previsualiza la build de producción
-pnpm format   # Formatea el código con Prettier
-pnpm lint     # Ejecuta ESLint y corrige errores automáticamente
+pnpm dev      # Start the development server
+pnpm build    # Build the application for production
+pnpm preview  # Preview the production build
+pnpm format   # Format code with Prettier
+pnpm lint     # Run ESLint and fix errors automatically
 ```
 
-## 📱 Funcionalidades
+## 📱 Functionality
 
-### Historias de Usuario
+### User Stories
 
-- **🏠 Página principal**: Los usuarios acceden a `/` para comenzar el flujo
-- **➕ Crear bookmark**: Los usuarios pueden agregar enlaces para guardarlos como bookmarks
-- **✏️ Editar bookmark**: Los usuarios pueden editar bookmarks previamente guardados
-- **🗑️ Eliminar bookmark**: Los usuarios pueden eliminar bookmarks individuales
-- **🗑️ Eliminar todos**: Los usuarios pueden eliminar todos los bookmarks con un solo botón
-- **📄 Navegación**: Los usuarios pueden navegar por las diferentes páginas de la lista
-- **🔍 Buscar**: Los usuarios pueden buscar bookmarks específicos en la lista
+- **🏠 Home page**: Users access `/` to begin the flow
+- **➕ Create bookmark**: Users can add links to save them as bookmarks
+- **✏️ Edit bookmark**: Users can edit previously saved bookmarks
+- **🗑️ Delete bookmark**: Users can delete individual bookmarks
+- **🗑️ Delete all**: Users can delete all bookmarks with a single button
+- **📄 Navigation**: Users can navigate through different pages of the list
+- **🔍 Search**: Users can search for specific bookmarks in the list
 
-## 📊 Modelo de Datos
+## 📊 Data Model
 
 ### Bookmark
 
 ```javascript
 {
-  id: Date,        // Timestamp único como identificador
-  url: String      // URL del bookmark (validada)
+  id: Date,        // Unique timestamp identifier
+  url: String      // Bookmark URL (validated)
 }
 ```
 
-## 🏗️ Estructura del Proyecto
+## 🏗️ Project Structure
 
 ```text
 src/
 ├── components/
-│   ├── Bookmarks/          # Componentes relacionados con bookmarks
-│   ├── Navigation/         # Componentes de navegación (Brand, Pagination)
-│   ├── Tokens/            # Componentes reutilizables (Buttons)
-│   └── Utils/             # Utilidades (Form, SearchBar, Error)
-├── contexts/              # React Context para manejo de estado global
-├── pages/                # Páginas principales de la aplicación
-├── styles/               # Arquitectura SASS organizada
-│   ├── abstracts/        # Variables, mixins, funciones
-│   ├── base/            # Reset, base, tipografía
-│   ├── components/      # Estilos de componentes
-│   └── pages/          # Estilos de páginas
-└── assets/              # Imágenes, iconos y recursos estáticos
+│   ├── Bookmarks/          # Bookmark-related components
+│   ├── Navigation/         # Navigation components (Brand, Pagination)
+│   ├── Tokens/            # Reusable components (Buttons)
+│   └── Utils/             # Utilities (Form, SearchBar, Error)
+├── contexts/              # React Context for global state management
+├── pages/                # Main application pages
+├── styles/               # Organised SASS architecture
+│   ├── abstracts/        # Variables, mixins, functions
+│   ├── base/            # Reset, base, typography
+│   ├── components/      # Component styles
+│   └── pages/          # Page styles
+└── assets/              # Images, icons, and static resources
 ```
 
-## 🤝 Contribución
+## 🤝 Contributing
 
-1. Fork el proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
+1. Fork the project
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## 📝 Licencia
+## 📝 Licence
 
-Este proyecto está bajo la licencia MIT. Ver el archivo `LICENSE` para más detalles.
+This project is licensed under the MIT License. See the `LICENSE` file for more details.
 
 ## 🔮 Roadmap
 
-- [ ] Sincronización con la nube
-- [ ] Categorías y tags para bookmarks
-- [ ] Importar/exportar bookmarks
-- [ ] Modo oscuro
+- [ ] Cloud synchronisation
+- [ ] Categories and tags for bookmarks
+- [ ] Import/export bookmarks
+- [ ] Dark mode
 - [ ] PWA (Progressive Web App)
-- [ ] Favoritos y sistema de puntuación
+- [ ] Favourites and rating system
 
 ---
 
-*Hecho con ❤️ por el equipo de Gocha*
+_Made with ❤️ by the Gocha team_
