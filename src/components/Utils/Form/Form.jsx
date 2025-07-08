@@ -1,8 +1,8 @@
 // Import from node modules
 import { useState } from 'react';
 
-// Import Context
-import { useBookmark } from '../../../contexts/BookmarkContext';
+// Import custom hook
+import { useBookmark } from '../../../hooks/useBookmark';
 
 // Import Images
 import dropitIcon from '../../../assets/icons/dropit.svg';
@@ -70,7 +70,7 @@ const Form = () => {
         setUrl('');
         // Clear the error message
         setError('');
-      } catch (err) {
+      } catch {
         setError('Invalid URL. Please enter a valid URL.');
       }
     } else {

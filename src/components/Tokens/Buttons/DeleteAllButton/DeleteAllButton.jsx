@@ -1,4 +1,4 @@
-import { useBookmark } from '../../../../contexts/BookmarkContext';
+import { useBookmark } from '../../../../hooks/useBookmark';
 
 function DeleteAllButton() {
   const { DeleteAllBookmarks } = useBookmark();
