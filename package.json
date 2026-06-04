@@ -33,7 +33,7 @@
     "follow-redirects": "^1.16.0",
     "globals": "^17.6.0",
     "prettier": "^3.8.3",
-    "vite": "^8.0.16"
+    "vite": "^8.0.7"
   },
   "packageManager": "pnpm@11.5.1"
 }
