@@ -1,7 +1,7 @@
 {
   "name": "gocha",
   "private": true,
-  "version": "1.0.3",
+  "version": "1.0.4",
   "type": "module",
   "engines": {
     "node": ">=22.0.0"
@@ -14,26 +14,27 @@
     "lint": "eslint --fix . --ext .js,.jsx"
   },
   "dependencies": {
-    "axios": "^1.17.0",
+    "axios": "^1.18.1",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
-    "react-router-dom": "^7.16.0",
-    "sass": "^1.100.0"
+    "react-router-dom": "^7.18.1",
+    "sass": "^1.101.0"
   },
   "devDependencies": {
-    "@eslint/js": "^10.0.1",
-    "@types/react": "^19.2.16",
+    "@eslint/js": "^9.34.0",
+    "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^6.0.2",
-    "eslint": "^10.4.1",
+    "@vitejs/plugin-react": "^6.0.3",
+    "eslint": "^9.34.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.1.1",
-    "eslint-plugin-react-refresh": "^0.5.2",
+    "eslint-plugin-react-refresh": "^0.5.3",
     "follow-redirects": "^1.16.0",
-    "globals": "^17.6.0",
-    "prettier": "^3.8.3",
-    "vite": "^8.0.7"
+    "globals": "^17.7.0",
+    "prettier": "^3.9.4",
+    "vite": "^8.1.2",
+    "form-data": "4.0.6"
   },
-  "packageManager": "pnpm@11.5.1"
+  "packageManager": "pnpm@11.9.0"
 }
